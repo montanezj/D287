@@ -55,13 +55,26 @@ Note: You cannot use a bicycle shop as a customer for your submission.
             Note: Wait until you have completed all the following prompts before you create your copy of the repository branch history.
 
     B.  Create a README file that includes notes describing where in the code to find the changes you made for each of parts C to J. Each note should include the prompt, file name, line number, and change.
-
+        
 
     C.  Customize the HTML user interface for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.
     
             Note: Do not remove any elements that were included in the screen. You may add any additional elements you would like or any images, colors, and styles, although it is not required.
     
+> [3:12 AM 10/22/24] [File = mainscreen.html] Changed shop name and title to Jason's Computer Shop. [Lines 14 & 19]
+>
+>[3:12 AM 10/22/24] [File = mainscreen.html] Added different colors to the background and text displayed on screen. [Lines 19, 21, 22, 35, 36, 37, 38, 42, 45, 46, 49, 50, 53, 54, 61, 62, 66, 69, 70, 86, 87, 104, 105, 106, 107, 110 & 111]
+> 
+>[3:32 AM 10/22/24] [File = mainscreen.html] Added parts and products to be used as a test. I will automate this later on. [Lines 40-71 & Lines 109-116]
+
+
+
+
     D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
+>[3:48 AM 10/22/24] [File = about.html] Added this file, it isn't populating when I type it into the search bar, but I will figure this out later.
+
+
+
     E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
 
 

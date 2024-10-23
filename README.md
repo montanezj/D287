@@ -85,14 +85,19 @@ Note: You cannot use a bicycle shop as a customer for your submission.
 
         Note: Make sure the sample inventory is added only when both the part and product lists are empty. When adding the sample inventory appropriate for the store, the inventory is stored in a set so duplicate items cannot be added to your products. When duplicate items are added, make a “multi-pack” part.
 >
->[12:46 PM 10/23/24] [File = BootStrapData.java] I added 5 outsourcedparts and products to the computer shop as requested.[Lines 42-84 & 106-117]
->[12:48 PM 10/23/24] [File = application.properties] I had to append "_20" to [Line 6] due to the database needing to be refreshed since I used _18 and _19 for testing purposes.
+>[12:46 AM 10/23/24] [File = BootStrapData.java] I added 5 outsourcedparts and products to the computer shop as requested.[Lines 42-84 & 106-117]
+>[12:48 AM 10/23/24] [File = application.properties] I had to append "_20" to [Line 6] due to the database needing to be refreshed since I used _18 and _19 for testing purposes.
 
     F.  Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
         •  The “Buy Now” button must be next to the buttons that update and delete products.
         •  The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.
         •  Display a message that indicates the success or failure of a purchase.
-
+>[2:40 AM 10/23/24] [File = mainscreen.html] [Line 127] I added the button to Buy.
+>[2:55 AM 10/23/24] [File = failure.html] Created this file in case inventory hit 0, then it would allow the customer to know their purchase was a failure.
+>[2:56 AM 10/23/24] [File = success.html] Created this file in case inventory was greater than 0, then it would allow the customer to know their purchase was a success.
+>[3:06 AM 10/23/24] [File = AddProductController.java] [Lines 180-204] I added the annotation for getmapping so that when there
+> was a success or failure during the purchase the program would know where to go with the if/else. I then added the functionality of the button
+> so that it would decrement by 1 every time someone clicked buy now and that it would save the variable inv to productRepository.
 
     G.  Modify the parts to track maximum and minimum inventory by doing the following:
         •  Add additional fields to the part entity for maximum and minimum inventory.

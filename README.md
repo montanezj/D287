@@ -61,7 +61,7 @@ Note: You cannot use a bicycle shop as a customer for your submission.
     
             Note: Do not remove any elements that were included in the screen. You may add any additional elements you would like or any images, colors, and styles, although it is not required.
     
-> [3:12 AM 10/22/24] [File = mainscreen.html] Changed shop name and title to Jason's Computer Shop. [Lines 14 & 19]
+>[3:12 AM 10/22/24] [File = mainscreen.html] Changed shop name and title to Jason's Computer Shop. [Lines 14 & 19]
 >
 >[3:12 AM 10/22/24] [File = mainscreen.html] Added different colors to the background and text displayed on screen. [Lines 19, 21, 22, 35, 36, 37, 38, 42, 45, 46, 49, 50, 53, 54, 61, 62, 66, 69, 70, 86, 87, 104, 105, 106, 107, 110 & 111]
 > 
@@ -71,9 +71,14 @@ Note: You cannot use a bicycle shop as a customer for your submission.
 
 
     D.  Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
->[3:48 AM 10/22/24] [File = about.html] Added this file, it isn't populating when I type it into the search bar, but I will figure this out later.
-
-
+>[3:48 AM 10/22/24] [File = about.html] Added the about.html file, it isn't populating when I type it into the search bar, but I will figure this out later.
+>
+>[1:20 PM 10/22/24] [File = mainscreen.html] Added a button to the about page. [Line 34]
+>
+>[7:45 PM 10/22/24] [File = MainScreenController.Java] Added @RequestMapping annotation in order for localhost:8080 to be called [Line 23], then I added
+>annotation for GetMapping("/about") so that my about would load when clicking the button on mainscreen.html [Line 43-46]
+>
+>[7:53 PM 10/22/24] [File = about.html] Added a button to return back to the mainscreen.html and I added style CSS as well. [Line 25]
 
     E.  Add a sample inventory appropriate for your chosen store to the application. You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
 

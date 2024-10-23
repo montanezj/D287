@@ -76,7 +76,7 @@ Note: You cannot use a bicycle shop as a customer for your submission.
 >[1:20 PM 10/22/24] [File = mainscreen.html] Added a button to the about page. [Line 34]
 >
 >[7:45 PM 10/22/24] [File = MainScreenController.Java] Added @RequestMapping annotation in order for localhost:8080 to be called [Line 23], then I added
->annotation for GetMapping("/about") so that my about would load when clicking the button on mainscreen.html [Line 43-46]
+>annotation for GetMapping("/about") so that my about would load when clicking the button on mainscreen.html [Lines 43-46]
 >
 >[7:53 PM 10/22/24] [File = about.html] Added a button to return back to the mainscreen.html and I added style CSS as well. [Line 25]
 
@@ -84,7 +84,9 @@ Note: You cannot use a bicycle shop as a customer for your submission.
 
 
         Note: Make sure the sample inventory is added only when both the part and product lists are empty. When adding the sample inventory appropriate for the store, the inventory is stored in a set so duplicate items cannot be added to your products. When duplicate items are added, make a “multi-pack” part.
-
+>
+>[12:46 PM 10/23/24] [File = BootStrapData.java] I added 5 outsourcedparts and products to the computer shop as requested.[Lines 42-84 & 106-117]
+>[12:48 PM 10/23/24] [File = application.properties] I had to append "_20" to [Line 6] due to the database needing to be refreshed since I used _18 and _19 for testing purposes.
 
     F.  Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
         •  The “Buy Now” button must be next to the buttons that update and delete products.

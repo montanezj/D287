@@ -11,15 +11,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>My Bicycle Shop</title>
+    <title>Jason's Computer Shop</title>
 </head>
-<body>
+<body style="background-color: #6A5ACD">
 
 <div class="container">
-    <h1>Shop</h1>
+    <h1 style="color:#FF69B4">Jason's Computer Shop</h1>
     <hr>
-    <h2>Parts</h2>
-    <form th:action="@{/mainscreen}">
+    <h2 style="color:#FF69B4">Parts</h2>
+    <form th:action="@{/mainscreen}"  style="color:#FF69B4">
         Filter: <input type="text" name="partkeyword" id="partkeyword" size="50" th:value="${partkeyword}" required />
         &nbsp;
         <input type="submit" value="Search" />
@@ -29,20 +29,58 @@
     <br><br>
     <a th:href="@{/showFormAddInPart}" class="btn btn-primary btn-sm mb-3">Add Inhouse Part</a>
     <a th:href="@{/showFormAddOutPart}" class="btn btn-primary btn-sm mb-3">Add Outsourced Part</a>
-    <table class="table table-bordered table-striped">
+    <table class="table table-bordered table-striped" >
         <thead class="thead-dark">
         <tr>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Inventory</th>
-            <th>Action</th>
+            <th style="color:#87CEEB">Name</th>
+            <th style="color:#87CEEB">Price</th>
+            <th style="color:#87CEEB">Inventory</th>
+            <th style="color:#87CEEB">Min Inventory</th>
+            <th style="color:#87CEEB">Max Inventory</th>
+            <th style="color:#87CEEB">Action</th>
         </tr>
+        <!--<tr>
+            <th style="color:#FF69B4">High End Motherboard</th>
+            <th style="color:#FF69B4">$500</th>
+        </tr>
+        <tr>
+            <th style="color:#FF69B4">Low End Motherboard</th>
+            <th style="color:#FF69B4">$250</th>
+        </tr>
+        <tr>
+            <th style="color:#FF69B4">High End Central Processing Unit</th>
+            <th style="color:#FF69B4">$800</th>
+        </tr>
+        <tr>
+            <th style="color:#FF69B4">Low End Central Processing Unit</th>
+            <th style="color:#FF69B4">$80</th>
+        </tr>
+        <tr>
+            <th style="color:#FF69B4">High End Power Supply Unit</th>
+            <th style="color:#FF69B4">$400</th>
+        </tr>
+        <tr>
+            <th style="color:#FF69B4">Low End Power Supply Unit</th>
+            <th style="color:#FF69B4">$90</th>
+        </tr>
+        <tr>
+            <th style="color:#FF69B4">High End Graphics Processing Unit</th>
+            <th style="color:#FF69B4">$1500</th>
+        </tr>
+        <tr>
+            <th style="color:#FF69B4">Low End Graphics Processing Unit</th>
+            <th style="color:#FF69B4">$330</th>
+        </tr>
+        -->
+
         </thead>
         <tbody>
         <tr th:each="tempPart : ${parts}">
             <td th:text="${tempPart.name}">1</td>
             <td th:text="${tempPart.price}">1</td>
             <td th:text="${tempPart.inv}">1</td>
+            <td th:text="${tempPart.minInv}">1</td>
+            <td th:text="${tempPart.maxInv}">1</td>
             <td><a th:href="@{/showPartFormForUpdate(partID=${tempPart.id})}" class="btn btn-primary btn-sm mb-3">Update</a>
                 <a th:href="@{/deletepart(partID=${tempPart.id})}" class="btn btn-primary btn-sm mb-3"
                    onclick="if(!(confirm('Are you sure you want to delete this part?')))return false">Delete</a>
@@ -50,8 +88,8 @@
         </tr>
         </tbody>
     </table>
-    <h2>Products</h2>
-    <form th:action="@{/mainscreen}">
+    <h2 style="color:#FF69B4">Products</h2>
+    <form th:action="@{/mainscreen}"  style="color:#FF69B4">
         Filter: <input type="text" name="productkeyword" id="productkeyword" size="50" th:value="${productkeyword}" required />
         &nbsp;
         <input type="submit" value="Search" />
@@ -68,11 +106,20 @@
     <table class="table table-bordered table-striped">
         <thead class="thead-dark">
         <tr>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Inventory</th>
-            <th>Action</th>
+            <th style="color:#87CEEB">Name</th>
+            <th style="color:#87CEEB">Price</th>
+            <th style="color:#87CEEB">Inventory</th>
+            <th style="color:#87CEEB">Action</th>
         </tr>
+        <tr>
+            <th style="color:#FF69B4">High End PC</th>
+            <th style="color:#FF69B4">$5000</th>
+        </tr>
+        <tr>
+            <th style="color:#FF69B4">Low End PC</th>
+            <th style="color:#FF69B4">$1000</th>
+        </tr>
+        <tr>
         </thead>
         <tbody>
         <tr th:each="tempProduct : ${products}">
@@ -82,10 +129,13 @@
             <td><a th:href="@{/showProductFormForUpdate(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3">Update</a>
                 <a th:href="@{/deleteproduct(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3"
                    onclick="if(!(confirm('Are you sure you want to delete this product?')))return false">Delete</a>
+                <a th:href="@{/buyProduct(productID=${tempProduct.id})}" class="btn btn-primary btn-sm mb-3">Buy Now</a>
             </td>
         </tr>
         </tbody>
     </table>
 </div>
+<br><br>
+<a th:href="@{/about}" class="btn btn-primary btn-sm mb-3">About</a>
 </body>
 </html>

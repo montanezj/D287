@@ -6,9 +6,11 @@ import com.example.demo.service.PartService;
 import com.example.demo.service.PartServiceImpl;
 import com.example.demo.service.ProductService;
 import com.example.demo.service.ProductServiceImpl;
+import org.aspectj.apache.bcel.generic.INVOKEINTERFACE;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
@@ -172,5 +174,28 @@ public class AddProductController {
         }
         theModel.addAttribute("availparts",availParts);
         return "productForm";
+    }
+    @GetMapping("/buyProduct")
+    public String buyProduct(@RequestParam("productID") int theId, Model theModel) {
+        //initialize productService bean through SpringContext
+        ProductService productService = context.getBean(ProductServiceImpl.class);
+        //creating a product object called product2
+        Product product=productService.findById(theId);
+        //creating a variable to store the value of inventory
+        int inv = product.getInv();
+        //checking to see if inv value is 0
+        if (inv == 0){
+            //returning failure.html page
+            return "failure";
+        } else {
+            //reduce inventory value by 1
+            inv = inv - 1;
+            //set new value of inventory
+            product.setInv(inv);
+            //save product object with new inventory value
+            productService.save(product);
+            //returning success.html page
+            return "success";
+        }
     }
 }

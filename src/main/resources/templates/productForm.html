@@ -26,7 +26,8 @@
     <ul><li th:each="err: ${#fields.allErrors()}" th:text="${err}"></li></ul>
     </div>
     </p>
-    <p><input type="submit" value="Submit" /></p>
+
+    <p th:href="@{/update}"><input type="submit" value="Submit" /></p>
 </form>
 
 
@@ -37,14 +38,17 @@
         <th>Name</th>
         <th>Price</th>
         <th>Inventory</th>
-        <th>Action</th>
+        <th>Min</th>
+        <th>Max</th>
     </tr>
     </thead>
     <form>
     <tr th:each="tempPart : ${availparts}">
-        <td th:text="${tempPart.name}">1</td>
-        <td th:text="${tempPart.price}">1</td>
-        <td th:text="${tempPart.inv}">1</td>
+        <td th:text="${tempPart.name}"></td>
+        <td th:text="${tempPart.price}"></td>
+        <td th:text="${tempPart.inv}"></td>
+        <td th:text="${tempPart.minInv}"></td>
+        <td th:text="${tempPart.maxInv}"></td>
         <td><a th:href="@{/associatepart(partID=${tempPart.id})}" class="btn btn-primary btn-sm mb-3">Add</a>
         </td>
     </tr>
@@ -57,7 +61,8 @@
             <th>Name</th>
             <th>Price</th>
             <th>Inventory</th>
-            <th>Action</th>
+            <th>Min</th>
+            <th>Max</th>
         </tr>
         </thead>
         <tbody>
@@ -65,11 +70,14 @@
             <td th:text="${tempPart.name}">1</td>
             <td th:text="${tempPart.price}">1</td>
             <td th:text="${tempPart.inv}">1</td>
+            <td th:text="${tempPart.minInv}"></td>
+            <td th:text="${tempPart.maxInv}"></td>
             <td><a th:href="@{/removepart(partID=${tempPart.id})}"  class="btn btn-primary btn-sm mb-3">Remove</a>
             </td>
         </tr>
         </tbody>
     </table>
+
 
 <!--<footer><a href="http://localhost:8080/">Link-->
 <!--    to Main Screen</a></footer>-->

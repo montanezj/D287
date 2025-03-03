@@ -114,11 +114,14 @@ public class BootStrapData implements CommandLineRunner {
         }
 
         if(productRepository.count() == 0) {
-            Product GamingPC = new Product(1200, "GamingPC", 100.0, 15);
-            Product LowEndPC = new Product(1212, "LowEndPC", 100.0, 15);
-            Product HighEndPC = new Product(1515, "HighEndPC", 100.0, 15);
-            Product StreamingPC = new Product(1616, "StreamingPC", 100.0, 15);
-            Product MacBook = new Product(1717, "MacBook", 100.0, 15);
+            Product GamingPC = new Product(1200, "GamingPC", 1500.0, 15);
+            Product LowEndPC = new Product(1212, "LowEndPC", 1200.0, 15);
+
+
+
+            Product HighEndPC = new Product(1515, "HighEndPC", 2000.0, 15);
+            Product StreamingPC = new Product(1616, "StreamingPC", 2500.0, 15);
+            Product MacBook = new Product(1717, "MacBook", 1000.0, 15);
 
             productRepository.save(GamingPC);
             productRepository.save(LowEndPC);

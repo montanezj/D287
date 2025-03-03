@@ -48,9 +48,16 @@ public class AddOutsourcedPartController {
         OutsourcedPart op=repo.findById((int)part.getId());
         if(op!=null)part.setProducts(op.getProducts());
             repo.save(part);
-        return "confirmationaddpart";}
+            }
+
+
+
+        return "confirmationaddpart";
     }
 
 
-
 }
+
+
+
+

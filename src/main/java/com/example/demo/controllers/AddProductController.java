@@ -152,6 +152,7 @@ public class AddProductController {
         List<Part>availParts=new ArrayList<>();
         for(Part p: partService.findAll()){
             if(!product1.getParts().contains(p))availParts.add(p);
+
         }
         theModel.addAttribute("availparts",availParts);
         return "productForm";}
@@ -171,6 +172,7 @@ public class AddProductController {
         List<Part>availParts=new ArrayList<>();
         for(Part p: partService.findAll()){
             if(!product1.getParts().contains(p))availParts.add(p);
+
         }
         theModel.addAttribute("availparts",availParts);
         return "productForm";
@@ -198,4 +200,5 @@ public class AddProductController {
             return "success";
         }
     }
+
 }

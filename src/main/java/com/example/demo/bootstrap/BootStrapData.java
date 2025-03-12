@@ -22,6 +22,11 @@ import java.util.Optional;
  *
  *
  */
+
+
+
+//Initializes products & parts
+    //setter for parts inv, name, mininv, maxinv, price, and companyname
 @Component
 public class BootStrapData implements CommandLineRunner {
 

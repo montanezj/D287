@@ -20,7 +20,7 @@
 
 
     <p><input type="text" th:field="*{inv}" placeholder="Inventory" class="form-control mb-4 col-4"/></p>
-
+    <p th:if="${#fields.hasErrors('inv')}" th:errors="*{inv}">Inventory Error</p>
     <p>
     <div th:if="${#fields.hasAnyErrors()}">
     <ul><li th:each="err: ${#fields.allErrors()}" th:text="${err}"></li></ul>
@@ -66,6 +66,7 @@
         </tr>
         </thead>
         <tbody>
+        <form>
         <tr th:each="tempPart : ${assparts}">
             <td th:text="${tempPart.name}">1</td>
             <td th:text="${tempPart.price}">1</td>
@@ -75,6 +76,7 @@
             <td><a th:href="@{/removepart(partID=${tempPart.id})}"  class="btn btn-primary btn-sm mb-3">Remove</a>
             </td>
         </tr>
+        </form>
         </tbody>
     </table>
 

@@ -33,6 +33,7 @@ public class AddInhousePartController{
     public String showFormAddInhousePart(Model theModel){
         InhousePart inhousepart=new InhousePart();
         theModel.addAttribute("inhousepart",inhousepart);
+
         return "InhousePartForm";
     }
 
@@ -51,5 +52,10 @@ public class AddInhousePartController{
 
             }
                 return "confirmationaddpart";
+
+
             }
+
+
+
         }

@@ -30,6 +30,13 @@ public class InventoryValidator implements ConstraintValidator<ValidInventory, P
     public boolean isValid(Part part, ConstraintValidatorContext constraintValidatorContext) {
 
         //create code to make sure that inventory is between min and max value
+        if (context==null) {
+            return true;
+        }
+        if (context!=null) {
+            myContext = context;
+        }
+        ProductService repo=myContext.getBean(ProductServiceImpl.class);
 
         if (part.getInv() > part.getMaxInv()) {
 

@@ -98,7 +98,8 @@ G.  Modify the parts to track maximum and minimum inventory by doing the followi
 
 [1:12 AM 02/26/2025] [File = Part.java] [Line 31-34] I added the min and max inventory variables.
 [1:25 AM 02/26/2025] [File = Part.java] [Line 85-104] I added the setter and getters for both of these variables
-[1:30 AM 02/26/2025] [File = application.properties] [Line 6] I edited the spring.datasource.url from ~/spring-boot-h2-db102_20 to ~/spring-boot-h2-db102_21.
+[1:30 AM 02/26/2025] [File = application.properties] [Line 6] I edited the spring.datasource.url from ~/spring-boot-h2-db102_21 to ~/spring-boot-h2-db103_21.
+FIXED error, where I was changing _22 instead of db103
 [1:40 AM 02/26/2025] [File = mainscreen.html] [Line 82 & 83] I added a min inventory and max inventory field in the table.
 [1:43 AM 02/26/2025] [File = mainscreen.html] [Line 44-92] Added max and min inventory variables to the object fields so that they are functional.
 [2:13 AM 02/26/2025] [File = OutsourcedPartForm.html] [Line 25-31] Added lines to update min and max inventory.

@@ -99,12 +99,12 @@ G.  Modify the parts to track maximum and minimum inventory by doing the followi
 [1:12 AM 02/26/2025] [File = Part.java] [Line 31-34] I added the min and max inventory variables.
 [1:25 AM 02/26/2025] [File = Part.java] [Line 85-104] I added the setter and getters for both of these variables
 [1:30 AM 02/26/2025] [File = application.properties] [Line 6] I edited the spring.datasource.url from ~/spring-boot-h2-db102_21 to ~/spring-boot-h2-db103_21.
-FIXED error, where I was changing _22 instead of db103
+FIXED error, where I was changing _22 instead of db103.
 [1:40 AM 02/26/2025] [File = mainscreen.html] [Line 82 & 83] I added a min inventory and max inventory field in the table.
 [1:43 AM 02/26/2025] [File = mainscreen.html] [Line 44-92] Added max and min inventory variables to the object fields so that they are functional.
 [2:13 AM 02/26/2025] [File = OutsourcedPartForm.html] [Line 25-31] Added lines to update min and max inventory.
 [2:16 AM 02/26/2025] [File = InhousePartForm.html] [Line 27-31] Added lines to update min and max inventory.
-[2:30 AM 02/26/2025] [File = InventoryValidator.java] Created file along with code to constrain the values given to update the inventory.
+[2:30 AM 02/26/2025] [File = InventoryValidator.java] Created file along with code to constrain the values given to update the inventory. Fixed ERROR: [Lines 33-39] Updated database bean.
 [2:30 AM 02/26/2025] [File = ValidInventory.java] Created file
 [2:13 AM 02/26/2025] [File = OutsourcedPartForm.html] [Line 32-38] Added an error when you attempt to update past the min or max inventory limit.
 
@@ -115,7 +115,7 @@ H.  Add validation for between or at the maximum and minimum fields. The validat
     •  Display error messages when adding and updating parts if the inventory is greater than the maximum.
 
 [3:49 AM 02/26/2025] [File = productForm.html] [Line 49,50,72, & 73] Added min and max columns.
-[3:49 AM 02/26/2025] [File = NotEnoughAssParts.html] Created an html file for redirection when not enough associated parts are available in inventory.
+[3:49 AM 02/26/2025] [File = NotEnoughAssociatedParts.html] Created an html file for redirection when not enough associated parts are available in inventory.
 TO-DO: if not enough inventory, redirect page to new html page with error message or success message depending on amount, can most likely reuse current success/failure pages
 
 

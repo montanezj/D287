@@ -3,7 +3,10 @@ package com.example.demo.controllers;
 import com.example.demo.domain.InhousePart;
 import com.example.demo.domain.OutsourcedPart;
 import com.example.demo.domain.Part;
-import com.example.demo.service.*;
+import com.example.demo.service.OutsourcedPartService;
+import com.example.demo.service.OutsourcedPartServiceImpl;
+import com.example.demo.service.PartService;
+import com.example.demo.service.PartServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Controller;
@@ -40,18 +43,15 @@ public class AddOutsourcedPartController {
         if(bindingResult.hasErrors()){
             return "OutsourcedPartForm";
         }
-        else {
-        OutsourcedPartService repo=context.getBean(OutsourcedPartServiceImpl.class);
-        OutsourcedPart op=repo.findById((int)part.getId());
-
-            }
-
-        return "confirmationaddpart";
+        else{
+            OutsourcedPartService repo=context.getBean(OutsourcedPartServiceImpl.class);
+            OutsourcedPart op=repo.findById((int)part.getId());
+            if(op!=null)part.setProducts(op.getProducts());
+            repo.save(part);
+            return "confirmationaddpart";}
     }
 
 
+
 }
-
-
-
 

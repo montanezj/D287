@@ -116,8 +116,7 @@ H.  Add validation for between or at the maximum and minimum fields. The validat
 
 [3:49 AM 02/26/2025] [File = productForm.html] [Line 49,50,72, & 73] Added min and max columns.
 [3:49 AM 02/26/2025] [File = NotEnoughAssociatedParts.html] Created an html file for redirection when not enough associated parts are available in inventory.
-TO-DO: if not enough inventory, redirect page to new html page with error message or success message depending on amount, can most likely reuse current success/failure pages
-
+[7:54 PM 6/15/2025] [File = EnufPartsValidator] Added functionality for error to pop up if inventory falls below 1.
 
 I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
 

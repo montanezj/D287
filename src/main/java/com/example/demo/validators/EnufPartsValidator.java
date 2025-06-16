@@ -32,8 +32,8 @@ public class EnufPartsValidator implements ConstraintValidator<ValidEnufParts, P
         ProductService repo = myContext.getBean(ProductServiceImpl.class);
         if (product.getId() != 0) {
             Product myProduct = repo.findById((int) product.getId());
-            for (Part p : myProduct.getParts()) {
-                if (p.getInv()<(product.getInv()-myProduct.getInv()))return false;
+            for (Part p : myProduct.getParts()) { //my product is the old parts and product is the new one myproduct.getinv vs product.getinv, watch video on enhanced for loop deduct from p's inventory and compare to minimum inventory all we are doing is latering if statement, less than sign should be comparing to minimum inventory p and product
+                if (p.getInv() -1 <(product.getInv()-myProduct.getInv()))return false;
             }
             return true;
         }

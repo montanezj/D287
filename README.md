@@ -119,7 +119,8 @@ H.  Add validation for between or at the maximum and minimum fields. The validat
 [7:54 PM 6/15/2025] [File = EnufPartsValidator] Added functionality for error to pop up if inventory falls below 1.
 
 I.  Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
-
+[9:22 PM  6/15/2025] [File pom.xml] [Lines 42-46] Installed JUnit 5
+[6:24 PM 06/16/2025] [File = PartTest.java] [Lines 106-124] Added tests for min and max inventory.
 
 J.  Remove the class files for any unused validators in order to clean your code.
 

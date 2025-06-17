@@ -123,6 +123,7 @@ I.  Add at least two unit tests for the maximum and minimum fields to the PartTe
 [6:24 PM 06/16/2025] [File = PartTest.java] [Lines 106-124] Added tests for min and max inventory.
 
 J.  Remove the class files for any unused validators in order to clean your code.
+[6:30 PM 06/16/2025] [File = DeletePartValidator.java] Deleted fuke
 
 
 K.  Demonstrate professional communication in the content and presentation of your submission.

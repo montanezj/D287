@@ -1,5 +1,7 @@
 package com.example.demo.domain;
 
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -100,6 +102,27 @@ class PartTest {
         partOut.setInv(inv);
         assertEquals(inv,partOut.getInv());
     }
+
+    @Test
+    void minInv() {
+        int minInv=10;
+        partIn.setInv(minInv);
+        assertEquals(minInv,partIn.getInv());
+        partOut.setInv(minInv);
+        assertEquals(minInv,partOut.getInv());
+        System.out.println("Test 1 Passed");
+    }
+
+    @Test
+    void maxInv() {
+        int maxInv=750;
+        partIn.setInv(maxInv);
+        assertEquals(maxInv,partIn.getInv());
+        partOut.setInv(maxInv);
+        assertEquals(maxInv,partOut.getInv());
+        System.out.println("Test 2 Passed");
+    }
+
 
     @Test
     void getProducts() {

@@ -64,5 +64,8 @@ public class AddPartController {
             return "negativeerror";
         }
     }
+    /** might add a getmapping bean here
+     *
+     */
 
 }
